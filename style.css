@@ -137,6 +137,14 @@ svg{
 #c{
     display: inline-block;
 }
+.canvasAndImage{
+  white-space: nowrap; position: relative;
+}
+.canvasAndImage *{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
 .slider {
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
