@@ -16,17 +16,19 @@ html{
           -ms-user-select: none; /* Internet Explorer/Edge */
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome and Opera */
-          -webkit-tap-highlight-color: transparent;   /* best code to remove _blue highlight */
+          -webkit-tap-highlight-color: transparent; 
+          overflow: hidden !important;  /* best code to remove _blue highlight */
   
   }
 
 body {
     background-color: #000;
     height: 100vh;
+    width: 100vw;
     box-sizing: border-box;
     align-items: center;
     text-align: center;
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 .color{
@@ -139,7 +141,7 @@ svg{
     display: inline-block;
 }
 .canvasAndImage{
-  white-space: nowrap; position: relative;
+  white-space: nowrap; position: relative; 
 }
 .canvasAndImage *{
   position: absolute;
