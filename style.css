@@ -26,6 +26,7 @@ body {
     box-sizing: border-box;
     align-items: center;
     text-align: center;
+    overflow: hidden;
 }
 
 .color{
