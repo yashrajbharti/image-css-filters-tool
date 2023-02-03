@@ -6,6 +6,7 @@ var slider3 = document.getElementById("myRange3");
 var output3 = document.getElementById("demo3");
 var slider4 = document.getElementById("myRange4");
 var output4 = document.getElementById("demo4");
+var stage = document.getElementById("stage");
 let hue = 0;
 let saturate = 100;
 let brightness = 105;
@@ -29,7 +30,6 @@ img.src = "stage.png";
 img.style.width = `${556}px`;
 img.style.height = `${162}px`;
 img.id = "stage";
-//<img id="stage" src="stage.png" alt="" width="100%">
 
 slider.oninput = function () {
   output.innerHTML = this.value;
@@ -73,9 +73,8 @@ download.addEventListener(
 );
 
 function change() {
-  document.getElementById(
-    "c"
-  ).style.filter = `hue-rotate(${hue}deg) saturate(${saturate}%) brightness(${brightness}%) contrast(${contrast}%)`;
+  canvas.style.filter = `hue-rotate(${hue}deg) saturate(${saturate}%) brightness(${brightness}%) contrast(${contrast}%)`;
+  stage.style.filter = `hue-rotate(${hue}deg) saturate(${saturate}%) brightness(${brightness}%) contrast(${contrast}%)`;
 }
 
 function resetImage() {
