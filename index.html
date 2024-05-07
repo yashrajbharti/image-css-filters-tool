@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Pokedex Stage Hue Generator</title>
+    <title>Pokedex Image Filters and Hue Generator</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -16,7 +16,8 @@
 
 <body>
     <img src="pokedex.png" alt="" height="30px">
-    <h1>Pokedex100 Stage Hue Generator</h1>
+    <h1>Pokedex100 Image Filters and Hue Generator</h1>
+    <input type="file" name="" id="">
     <a class="btn btn-success btn-gradient" id="download" href="javascript:void(0);"><span>Save</span></a>
     <div class="color">
         <input type="range" min="-180" max="180" value="0" class="slider" id="myRange">
@@ -33,9 +34,9 @@
     </div>
     <div class="canvasAndImage">
         <canvas id="c" width="556%" height="162%"></canvas>
-        <img id="stage" src="stage.png" alt=""
-            width="556px" height="162px">
+        <img id="stage" src="stage.png" alt="" width="556px" height="162px">
     </div>
+
 
     <script src="script.js"></script>
 </body>

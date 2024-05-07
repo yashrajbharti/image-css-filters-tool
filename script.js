@@ -1,20 +1,20 @@
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-var slider2 = document.getElementById("myRange2");
-var output2 = document.getElementById("demo2");
-var slider3 = document.getElementById("myRange3");
-var output3 = document.getElementById("demo3");
-var slider4 = document.getElementById("myRange4");
-var output4 = document.getElementById("demo4");
-var stage = document.getElementById("stage");
+let slider = document.getElementById("myRange");
+let output = document.getElementById("demo");
+let slider2 = document.getElementById("myRange2");
+let output2 = document.getElementById("demo2");
+let slider3 = document.getElementById("myRange3");
+let output3 = document.getElementById("demo3");
+let slider4 = document.getElementById("myRange4");
+let output4 = document.getElementById("demo4");
+let stage = document.getElementById("stage");
 let hue = 0;
 let saturate = 100;
 let brightness = 105;
 let contrast = 105;
 
-var canvas = document.getElementById("c");
-var ctx = canvas.getContext("2d");
-var img = new Image();
+let canvas = document.getElementById("c");
+let ctx = canvas.getContext("2d");
+let img = new Image();
 
 //Image with EventListener
 img.addEventListener(
@@ -55,7 +55,7 @@ slider4.oninput = function () {
   change();
 };
 
-var download = document.getElementById("download");
+let download = document.getElementById("download");
 let huecopy = hue;
 let saturatecopy = saturate;
 let brightnesscopy = brightness;
@@ -80,3 +80,11 @@ function change() {
 function resetImage() {
   img.src = "stage.png";
 }
+
+let fileSelector = document.querySelector("input[type='file']");
+fileSelector.addEventListener("change", () => {
+  const [file] = fileSelector.files;
+  if (file) {
+    stage.src = URL.createObjectURL(file);
+  }
+});
