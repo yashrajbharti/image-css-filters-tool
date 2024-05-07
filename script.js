@@ -11,6 +11,7 @@ let hue = 0;
 let saturate = 100;
 let brightness = 105;
 let contrast = 105;
+let imageFromFile;
 
 let canvas = document.getElementById("c");
 let ctx = canvas.getContext("2d");
@@ -78,7 +79,7 @@ function change() {
 }
 
 function resetImage() {
-  img.src = "stage.png";
+  img.src = imageFromFile || "stage.png";
 }
 
 let fileSelector = document.querySelector("input[type='file']");
@@ -86,5 +87,7 @@ fileSelector.addEventListener("change", () => {
   const [file] = fileSelector.files;
   if (file) {
     stage.src = URL.createObjectURL(file);
+    imageFromFile = URL.createObjectURL(file);
   }
+  resetImage();
 });
